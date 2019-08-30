@@ -32,7 +32,7 @@ CREATE TABLE `tb_item` (
 -- ----------------------------
 INSERT INTO `tb_item` VALUES ('1', 'iPhone 6', '5288.0', '苹果公司新发布的手机产品。');
 INSERT INTO `tb_item` VALUES ('2', 'iPhone 6 plus', '6288.0', '苹果公司发布的新大屏手机。');
-
+ 
 -- ----------------------------
 -- Table structure for tb_order
 -- ----------------------------
