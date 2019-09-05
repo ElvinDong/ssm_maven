@@ -47,7 +47,7 @@
 			return ;
 		}
 		
-		$.post("/user/manage/saveUser.action",$("#content").serialize(), function(data){
+		/* $.post("/user/manage/saveUser.action",$("#content").serialize(), function(data){
 			if(data == 1){
 				$.messager.alert('提示','新增会员成功!');
 				$('#userAdd').window('close');
@@ -56,7 +56,22 @@
 			}else{
 				$.messager.alert('提示','新增会员失败!');
 			}
-		});
+		}); */
+		
+		 $.ajax({
+				url : "/user/manage/saveUser.action",
+				type : "POST",
+				data : $("#content").serialize(), //转JSON字符串
+			    dataType: 'json',
+		        contentType:'application/json;charset=UTF-8', //contentType很重要   
+				success : function(result) {
+					console.log(result);
+					$('#userAdd').window('close');
+					$("#userList").datagrid("reload");
+					//clearForm();
+				}
+		 });
+
 	}
 	function clearForm(){
 		$('#content').form('reset');
