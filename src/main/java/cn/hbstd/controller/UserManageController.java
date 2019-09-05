@@ -19,6 +19,7 @@ import cn.hbstd.service.UserService;
 /**
  * @author 作者 Your-Name: DM
  * @version 创建时间：2019年8月28日 下午2:20:36 类说明 : User的操作类
+ * 本类是处理User的增删改
  */
 @Controller
 @RequestMapping("user/manage/")
